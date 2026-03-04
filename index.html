@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="电子信息, 嵌入式, STM32, 信号处理" />
+       
+      <meta name="description" content="专注电子信息工程、信号处理与嵌入式开发" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 刘汝豪的个人博客</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">刘汝豪的个人博客</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
+            </a>
+        </li>
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-智能空地协同消防系统开发心得"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/"
+    >智能空地协同消防系统——2023年电赛实战总结</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/" class="article-date">
+  <time datetime="2026-03-04T02:30:00.000Z" itemprop="datePublished">2026-03-04</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">项目实战</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-项目概况"><a href="#1-项目概况" class="headerlink" title="1. 项目概况"></a>1. 项目概况</h2><p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
+<blockquote>
+<p><strong>所获荣誉</strong>：2023年全国大学生电子设计大赛 山东省赛区本科组二等奖。</p>
+</blockquote>
+<hr>
+<h2 id="2-核心硬件架构"><a href="#2-核心硬件架构" class="headerlink" title="2. 核心硬件架构"></a>2. 核心硬件架构</h2><p>本系统利用了多种嵌入式开发工具和硬件模块进行协同：</p>
+<ul>
+<li><strong>主控芯片</strong>：采用 STM32 系列单片机，负责底层逻辑控制与运动补偿。</li>
+<li><strong>视觉大脑</strong>：搭载 <strong>OpenMV</strong> 摄像头，利用其集成的图像处理算法进行火情实时检测。</li>
+<li><strong>硬件设计</strong>：利用 <strong>Altium Designer</strong> 完成了系统核心 PCB 板的绘制与电路打样。</li>
+<li><strong>调试工具</strong>：开发过程中重度使用 <strong>Keil</strong>、<strong>VS Code</strong> 以及串口调试助手进行逻辑优化。</li>
+</ul>
+<hr>
+<h2 id="3-工作流程与逻辑实现"><a href="#3-工作流程与逻辑实现" class="headerlink" title="3. 工作流程与逻辑实现"></a>3. 工作流程与逻辑实现</h2><h3 id="3-1-发现火情（无人机端）"><a href="#3-1-发现火情（无人机端）" class="headerlink" title="3.1 发现火情（无人机端）"></a>3.1 发现火情（无人机端）</h3><p>无人机在高空进行巡检，通过 OpenMV 捕捉特定的颜色阈值（模拟火源）。一旦锁定目标，系统会计算出火源相对于无人机的方位信息。</p>
+<h3 id="3-2-协同通讯"><a href="#3-2-协同通讯" class="headerlink" title="3.2 协同通讯"></a>3.2 协同通讯</h3><p>无人机通过无线通讯模块将火情坐标实时传输至地面消防车。</p>
+<h3 id="3-3-快速抵达（消防车端）"><a href="#3-3-快速抵达（消防车端）" class="headerlink" title="3.3 快速抵达（消防车端）"></a>3.3 快速抵达（消防车端）</h3><p>地面消防车接收到指令后，结合自身的传感器数据进行路径规划，以最快速度避障并到达模拟现场执行救援任务。</p>
+<hr>
+<h2 id="4-核心代码片段-示例"><a href="#4-核心代码片段-示例" class="headerlink" title="4. 核心代码片段 (示例)"></a>4. 核心代码片段 (示例)</h2><p>以下是基于 OpenMV 的火情识别逻辑简述：</p>
+<pre><code class="python">import sensor, image, time
+
+# 设置颜色识别阈值（模拟火焰色）
+fire_threshold = (30, 100, 15, 127, 15, 127)
+
+sensor.reset()
+sensor.set_pixformat(sensor.RGB565)
+sensor.set_framesize(sensor.QVGA)
+sensor.skip_frames(time = 2000)
+
+while(True):
+    img = sensor.snapshot()
+    blobs = img.find_blobs([fire_threshold])
+    if blobs:
+        for b in blobs:
+            img.draw_rectangle(b.rect())
+            # 发送坐标给 STM32 进行无线传输
+            print(&quot;Fire detected at:&quot;, b.cx(), b.cy())
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenMV/" rel="tag">OpenMV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STM32/" rel="tag">STM32</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="tag">嵌入式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" rel="tag">电子设计竞赛</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-index"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/03/04/index/"
+    >关于我</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/03/04/index/" class="article-date">
+  <time datetime="2026-03-04T02:00:00.000Z" itemprop="datePublished">2026-03-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="🧑-个人简介"><a href="#🧑-个人简介" class="headerlink" title="🧑 个人简介"></a>🧑 个人简介</h2><ul>
+<li><strong>学历</strong>：本科（电子信息工程）</li>
+<li><strong>毕业院校</strong>：青岛理工大学</li>
+<li><strong>GPA</strong>：4.20</li>
+<li><strong>籍贯</strong>：山东省**市</li>
+</ul>
+<hr>
+<h2 id="📚-教育背景"><a href="#📚-教育背景" class="headerlink" title="📚 教育背景"></a>📚 教育背景</h2><p><strong>2021.09 - 2025.06 | 青岛理工大学 | 电子信息工程</strong></p>
+<ul>
+<li><strong>主修课程</strong>：电路原理、模拟电子技术、数字电子技术、信号与系统、数字信号处理、单片机原理及应用、通信原理、高频电子线路、C&#x2F;C++程序设计等</li>
+<li><strong>辅修课程</strong>：数据结构、数学建模、数据库技术与应用、数字图像处理、嵌入式系统</li>
+</ul>
+<hr>
+<h2 id="🛠-专业技能"><a href="#🛠-专业技能" class="headerlink" title="🛠 专业技能"></a>🛠 专业技能</h2><ul>
+<li><strong>嵌入式开发</strong>：熟练使用 Keil，具备 STM32 等多种单片机编程开发经验，能够独立进行系统级调试。</li>
+<li><strong>机器视觉</strong>：熟悉 OpenMV IDE，能够进行基于视觉的图像处理和多机协同项目开发。</li>
+<li><strong>数据库与编程</strong>：熟悉 MySQL、SQL Server，熟练使用 VS Code，具备代码调试与版本控制能力。</li>
+</ul>
+<hr>
+<h2 id="🚀-项目经历"><a href="#🚀-项目经历" class="headerlink" title="🚀 项目经历"></a>🚀 项目经历</h2><h3 id="1-智能空地协同消防系统-TI-杯"><a href="#1-智能空地协同消防系统-TI-杯" class="headerlink" title="1. 智能空地协同消防系统 (TI 杯)"></a>1. 智能空地协同消防系统 (TI 杯)</h3><ul>
+<li><strong>工具</strong>：Keil, Altium Designer, VS Code, OpenMV, 串口调试工具</li>
+<li><strong>描述</strong>：设计并实现了一套无人机与消防车协同系统。利用 OpenMV 进行火情识别，并通过无线协议实现空地通讯。该项目旨在解决复杂地形下的快速救援问题。</li>
+</ul>
+<h3 id="2-教师工作量管理系统"><a href="#2-教师工作量管理系统" class="headerlink" title="2. 教师工作量管理系统"></a>2. 教师工作量管理系统</h3><ul>
+<li><strong>工具</strong>：MySQL, Visual Studio, VS Code, Navicat</li>
+<li><strong>描述</strong>：开发了具备高效信息录入、自动计算与查询功能的管理系统，模拟学校教务流程，确保了数据处理的准确性与便捷性。</li>
+</ul>
+<hr>
+<h2 id="🏆-荣誉奖项"><a href="#🏆-荣誉奖项" class="headerlink" title="🏆 荣誉奖项"></a>🏆 荣誉奖项</h2><ul>
+<li>**全国大学生电子设计大赛 (TI 杯)**：山东省赛区本科组二等奖</li>
+<li><strong>“大唐杯”全国大学生信息通信技术大赛</strong>：山东省赛区三等奖</li>
+<li><strong>校级荣誉</strong>：连续三学年荣获“优秀学生”称号</li>
+</ul>
+<hr>
+<h2 id="📧-联系方式"><a href="#📧-联系方式" class="headerlink" title="📧 联系方式"></a>📧 联系方式</h2><ul>
+<li><strong>邮箱</strong>：liurh****@163.com (出于隐私保护已掩码，欢迎通过 GitHub 交流)</li>
+<li><strong>GitHub</strong>: [您的GitHub链接]</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2026
+        <i class="ri-heart-fill heart_icon"></i> 刘汝豪
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="刘汝豪的个人博客"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
