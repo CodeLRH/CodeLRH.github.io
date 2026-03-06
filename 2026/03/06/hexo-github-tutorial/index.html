@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">687</span>
+            <span class="post-count">693</span>
         </span>
     </span>
 
@@ -154,8 +154,28 @@
 </ul>
 <hr>
 <h3 id="第三步：验证连接"><a href="#第三步：验证连接" class="headerlink" title="第三步：验证连接"></a>第三步：验证连接</h3><p>在 Git Bash 中输入以下命令测试连接是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">* **重要提示**：第一次连接时，你会看到一条类似这样的警告：</span><br><span class="line">  &gt; `The authenticity of host <span class="string">&#x27;github.com&#x27;</span> can<span class="string">&#x27;t be established... Are you sure you want to continue connecting (yes/no/[fingerprint])?`</span></span><br><span class="line"><span class="string">* 此时**必须输入 `yes` 并回车**。</span></span><br><span class="line"><span class="string">* 如果屏幕上出现 `Hi CodeLRH! You&#x27;</span>ve successfully authenticated...`，恭喜你，说明你已经成功打通了与 GitHub 的“秘密隧道”！</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="comment">### 第四步：修改 Hexo 配置并部署</span></span><br><span class="line"></span><br><span class="line">1. **修改配置文件**：打开博客根目录下的 `_config.yml` 文件。</span><br><span class="line">2. **配置 SSH 地址**：将最底部的 `deploy` 部分修改为 SSH 格式（注意 `repo` 地址的写法变化）：</span><br><span class="line">   ```yaml</span><br><span class="line">   deploy:</span><br><span class="line">     <span class="built_in">type</span>: git</span><br><span class="line">     repo: git@github.com:CodeLRH/CodeLRH.github.io.git</span><br><span class="line">     branch: main</span><br></pre></td></tr></table></figure>
-<p>3.<strong>一键部署发布</strong>：在 Git Bash 中运行以下组合命令：<br>   <figure class="highlight plaintext"><figcaption><span>clean && hexo g && hexo d</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+<pre><code class="bash">ssh -T git@github.com
+
+* **重要提示**：第一次连接时，你会看到一条类似这样的警告：
+  &gt; `The authenticity of host &#39;github.com&#39; can&#39;t be established... Are you sure you want to continue connecting (yes/no/[fingerprint])?`
+* 此时**必须输入 `yes` 并回车**。
+* 如果屏幕上出现 `Hi CodeLRH! You&#39;ve successfully authenticated...`，恭喜你，说明你已经成功打通了与 GitHub 的“秘密隧道”！
+
+---
+
+### 第四步：修改 Hexo 配置并部署
+
+1. **修改配置文件**：打开博客根目录下的 `_config.yml` 文件。
+2. **配置 SSH 地址**：将最底部的 `deploy` 部分修改为 SSH 格式（注意 `repo` 地址的写法变化）：
+   ```yaml
+   deploy:
+     type: git
+     repo: git@github.com:CodeLRH/CodeLRH.github.io.git
+     branch: main
+3. **一键部署发布**：在 Git Bash 中运行以下组合命令：
+   ```bash
+   hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre>
  
       <!-- reward -->
       
