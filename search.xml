@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>从零开始：使用 Hexo + GitHub Pages 搭建个人静态博客</title>
+    <url>/2026/03/06/hexo-github-tutorial/</url>
+    <content><![CDATA[<h2 id="1-前期准备：安装必要工具"><a href="#1-前期准备：安装必要工具" class="headerlink" title="1. 前期准备：安装必要工具"></a>1. 前期准备：安装必要工具</h2><p>在正式开始之前，你需要安装两个核心环境：</p>
+<ul>
+<li><strong>Node.js</strong>：Hexo 框架运行的基础。<ul>
+<li><a href="https://nodejs.org/">官方下载地址</a> (建议选择 LTS 长期支持版)</li>
+</ul>
+</li>
+<li><strong>Git</strong>：用于将本地代码推送到 GitHub。<ul>
+<li><a href="https://git-scm.com/">官方下载地址</a></li>
+</ul>
+</li>
+</ul>
+<p>安装完成后，在终端（Git Bash）输入 <code>node -v</code> 和 <code>git --version</code> 检查是否安装成功。</p>
+<hr>
+<h2 id="2-本地搭建-Hexo-网站"><a href="#2-本地搭建-Hexo-网站" class="headerlink" title="2. 本地搭建 Hexo 网站"></a>2. 本地搭建 Hexo 网站</h2><ol>
+<li><strong>安装 Hexo 命令行工具</strong>：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li><strong>初始化博客目录</strong>：<br>找一个空文件夹（例如 <code>E:/Myblog</code>），打开 Git Bash 输入：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li>
+<li><strong>本地预览</strong>：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+现在访问 <code>http://localhost:4000</code> 即可看到你的初始博客。</li>
+</ol>
+<hr>
+<h2 id="3-借鉴主题美化页面"><a href="#3-借鉴主题美化页面" class="headerlink" title="3. 借鉴主题美化页面"></a>3. 借鉴主题美化页面</h2><p>Hexo 的魅力在于丰富的主题。你可以前往 <a href="https://hexo.io/themes/">Hexo Themes</a> 寻找心仪的设计：</p>
+<ul>
+<li><strong>热门推荐</strong>：NexT, Butterfly, Fluid。</li>
+<li><strong>安装方法</strong>：通常是通过 <code>git clone</code> 将主题下载到 <code>themes/</code> 文件夹，并修改根目录下的 <code>_config.yml</code> 中的 <code>theme</code> 字段。</li>
+</ul>
+<hr>
+<h2 id="4-设置-SSH-密钥：打通-GitHub-部署隧道"><a href="#4-设置-SSH-密钥：打通-GitHub-部署隧道" class="headerlink" title="4. 设置 SSH 密钥：打通 GitHub 部署隧道"></a>4. 设置 SSH 密钥：打通 GitHub 部署隧道</h2><p>为了安全且稳定地将博客发布到 GitHub，我们需要配置 SSH 密钥。</p>
+<h3 id="第一步：生成-SSH-密钥对"><a href="#第一步：生成-SSH-密钥对" class="headerlink" title="第一步：生成 SSH 密钥对"></a>第一步：生成 SSH 密钥对</h3><p>在 Git Bash 中输入（请替换为你自己的邮箱）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步：将-SSH-Key-添加到-GitHub"><a href="#第二步：将-SSH-Key-添加到-GitHub" class="headerlink" title="第二步：将 SSH Key 添加到 GitHub"></a>第二步：将 SSH Key 添加到 GitHub</h3><ul>
+<li><p><strong>获取公钥</strong>：在终端输入以下命令显示公钥内容：</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>复制内容</strong>：用鼠标选中屏幕上以 <code>ssh-rsa</code> 开头、以你的邮箱结尾的那一大串字符，右键选择 <strong>Copy</strong>。</p>
+</li>
+<li><p><strong>前往 GitHub 配置</strong>：</p>
+<ol>
+<li>登录 GitHub，点击右上角头像 -&gt; <strong>Settings</strong>。</li>
+<li>在左侧菜单找到 <strong>SSH and GPG keys</strong>。</li>
+<li>点击绿色的 <strong>New SSH key</strong> 按钮。</li>
+<li><strong>Title</strong> 随便填（例如填 <code>My Laptop</code>），在 <strong>Key</strong> 的文本框内粘贴你刚才复制的公钥内容。</li>
+<li>点击 <strong>Add SSH key</strong> 保存。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="第三步：验证连接"><a href="#第三步：验证连接" class="headerlink" title="第三步：验证连接"></a>第三步：验证连接</h3><p>在 Git Bash 中输入以下命令测试连接是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>重要提示</strong>：第一次连接时，你会看到一条类似这样的警告：<blockquote>
+<p><code>The authenticity of host &#39;github.com&#39; can&#39;t be established... Are you sure you want to continue connecting (yes/no/[fingerprint])?</code></p>
+</blockquote>
+</li>
+<li>此时<strong>必须输入 <code>yes</code> 并回车</strong>。</li>
+<li>如果屏幕上出现 <code>Hi CodeLRH! You&#39;ve successfully authenticated...</code>，恭喜你，说明你已经成功打通了与 GitHub 的“秘密隧道”！</li>
+</ul>
+<hr>
+<h3 id="第四步：修改-Hexo-配置并部署"><a href="#第四步：修改-Hexo-配置并部署" class="headerlink" title="第四步：修改 Hexo 配置并部署"></a>第四步：修改 Hexo 配置并部署</h3><ol>
+<li><strong>修改配置文件</strong>：打开博客根目录下的 <code>_config.yml</code> 文件。</li>
+<li><strong>配置 SSH 地址</strong>：将最底部的 <code>deploy</code> 部分修改为 SSH 格式（注意 <code>repo</code> 地址的写法变化）：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:CodeLRH/CodeLRH.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>一键部署发布</strong>：在 Git Bash 中运行以下组合命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于我</title>
+    <url>/2026/03/04/index/</url>
+    <content><![CDATA[<h2 id="🧑-个人简介"><a href="#🧑-个人简介" class="headerlink" title="🧑 个人简介"></a>🧑 个人简介</h2><ul>
+<li><strong>学历</strong>：本科（电子信息工程）</li>
+<li><strong>毕业院校</strong>：青岛理工大学</li>
+<li><strong>GPA</strong>：4.20</li>
+<li><strong>籍贯</strong>：山东省**市</li>
+</ul>
+<hr>
+<h2 id="📚-教育背景"><a href="#📚-教育背景" class="headerlink" title="📚 教育背景"></a>📚 教育背景</h2><p><strong>2021.09 - 2025.06 | 青岛理工大学 | 电子信息工程</strong></p>
+<ul>
+<li><strong>主修课程</strong>：电路原理、模拟电子技术、数字电子技术、信号与系统、数字信号处理、单片机原理及应用、通信原理、高频电子线路、C&#x2F;C++程序设计等</li>
+<li><strong>辅修课程</strong>：数据结构、数学建模、数据库技术与应用、数字图像处理、嵌入式系统</li>
+</ul>
+<hr>
+<h2 id="🛠-专业技能"><a href="#🛠-专业技能" class="headerlink" title="🛠 专业技能"></a>🛠 专业技能</h2><ul>
+<li><strong>嵌入式开发</strong>：熟练使用 Keil，具备 STM32 等多种单片机编程开发经验，能够独立进行系统级调试。</li>
+<li><strong>机器视觉</strong>：熟悉 OpenMV IDE，能够进行基于视觉的图像处理和多机协同项目开发。</li>
+<li><strong>数据库与编程</strong>：熟悉 MySQL、SQL Server，熟练使用 VS Code，具备代码调试与版本控制能力。</li>
+</ul>
+<hr>
+<h2 id="🚀-项目经历"><a href="#🚀-项目经历" class="headerlink" title="🚀 项目经历"></a>🚀 项目经历</h2><h3 id="1-智能空地协同消防系统-TI-杯"><a href="#1-智能空地协同消防系统-TI-杯" class="headerlink" title="1. 智能空地协同消防系统 (TI 杯)"></a>1. 智能空地协同消防系统 (TI 杯)</h3><ul>
+<li><strong>工具</strong>：Keil, Altium Designer, VS Code, OpenMV, 串口调试工具</li>
+<li><strong>描述</strong>：设计并实现了一套无人机与消防车协同系统。利用 OpenMV 进行火情识别，并通过无线协议实现空地通讯。该项目旨在解决复杂地形下的快速救援问题。</li>
+</ul>
+<h3 id="2-教师工作量管理系统"><a href="#2-教师工作量管理系统" class="headerlink" title="2. 教师工作量管理系统"></a>2. 教师工作量管理系统</h3><ul>
+<li><strong>工具</strong>：MySQL, Visual Studio, VS Code, Navicat</li>
+<li><strong>描述</strong>：开发了具备高效信息录入、自动计算与查询功能的管理系统，模拟学校教务流程，确保了数据处理的准确性与便捷性。</li>
+</ul>
+<hr>
+<h2 id="🏆-荣誉奖项"><a href="#🏆-荣誉奖项" class="headerlink" title="🏆 荣誉奖项"></a>🏆 荣誉奖项</h2><ul>
+<li>**全国大学生电子设计大赛 (TI 杯)**：山东省赛区本科组二等奖</li>
+<li><strong>“大唐杯”全国大学生信息通信技术大赛</strong>：山东省赛区三等奖</li>
+<li><strong>校级荣誉</strong>：连续三学年荣获“优秀学生”称号</li>
+</ul>
+<hr>
+<h2 id="📧-联系方式"><a href="#📧-联系方式" class="headerlink" title="📧 联系方式"></a>📧 联系方式</h2><ul>
+<li><strong>邮箱</strong>：liurh****@163.com (出于隐私保护已掩码，欢迎通过 GitHub 交流)</li>
+<li><strong>GitHub</strong>: [您的GitHub链接]</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>智能空地协同消防系统——2023年电赛实战总结</title>
+    <url>/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h2 id="1-项目概况"><a href="#1-项目概况" class="headerlink" title="1. 项目概况"></a>1. 项目概况</h2><p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
+<blockquote>
+<p><strong>所获荣誉</strong>：2023年全国大学生电子设计大赛 山东省赛区本科组二等奖。</p>
+</blockquote>
+<hr>
+<h2 id="2-核心硬件架构"><a href="#2-核心硬件架构" class="headerlink" title="2. 核心硬件架构"></a>2. 核心硬件架构</h2><p>本系统利用了多种嵌入式开发工具和硬件模块进行协同：</p>
+<ul>
+<li><strong>主控芯片</strong>：采用 STM32 系列单片机，负责底层逻辑控制与运动补偿。</li>
+<li><strong>视觉大脑</strong>：搭载 <strong>OpenMV</strong> 摄像头，利用其集成的图像处理算法进行火情实时检测。</li>
+<li><strong>硬件设计</strong>：利用 <strong>Altium Designer</strong> 完成了系统核心 PCB 板的绘制与电路打样。</li>
+<li><strong>调试工具</strong>：开发过程中重度使用 <strong>Keil</strong>、<strong>VS Code</strong> 以及串口调试助手进行逻辑优化。</li>
+</ul>
+<hr>
+<h2 id="3-工作流程与逻辑实现"><a href="#3-工作流程与逻辑实现" class="headerlink" title="3. 工作流程与逻辑实现"></a>3. 工作流程与逻辑实现</h2><h3 id="3-1-发现火情（无人机端）"><a href="#3-1-发现火情（无人机端）" class="headerlink" title="3.1 发现火情（无人机端）"></a>3.1 发现火情（无人机端）</h3><p>无人机在高空进行巡检，通过 OpenMV 捕捉特定的颜色阈值（模拟火源）。一旦锁定目标，系统会计算出火源相对于无人机的方位信息。</p>
+<h3 id="3-2-协同通讯"><a href="#3-2-协同通讯" class="headerlink" title="3.2 协同通讯"></a>3.2 协同通讯</h3><p>无人机通过无线通讯模块将火情坐标实时传输至地面消防车。</p>
+<h3 id="3-3-快速抵达（消防车端）"><a href="#3-3-快速抵达（消防车端）" class="headerlink" title="3.3 快速抵达（消防车端）"></a>3.3 快速抵达（消防车端）</h3><p>地面消防车接收到指令后，结合自身的传感器数据进行路径规划，以最快速度避障并到达模拟现场执行救援任务。</p>
+<hr>
+<h2 id="4-核心代码片段-示例"><a href="#4-核心代码片段-示例" class="headerlink" title="4. 核心代码片段 (示例)"></a>4. 核心代码片段 (示例)</h2><p>以下是基于 OpenMV 的火情识别逻辑简述：</p>
+<pre><code class="python">import sensor, image, time
+
+# 设置颜色识别阈值（模拟火焰色）
+fire_threshold = (30, 100, 15, 127, 15, 127)
+
+sensor.reset()
+sensor.set_pixformat(sensor.RGB565)
+sensor.set_framesize(sensor.QVGA)
+sensor.skip_frames(time = 2000)
+
+while(True):
+    img = sensor.snapshot()
+    blobs = img.find_blobs([fire_threshold])
+    if blobs:
+        for b in blobs:
+            img.draw_rectangle(b.rect())
+            # 发送坐标给 STM32 进行无线传输
+            print(&quot;Fire detected at:&quot;, b.cx(), b.cy())
+</code></pre>
+]]></content>
+      <categories>
+        <category>项目实战</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+        <tag>OpenMV</tag>
+        <tag>电子设计竞赛</tag>
+      </tags>
+  </entry>
+</search>
