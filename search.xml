@@ -79,49 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于我</title>
-    <url>/2026/03/04/index/</url>
-    <content><![CDATA[<h2 id="🧑-个人简介"><a href="#🧑-个人简介" class="headerlink" title="🧑 个人简介"></a>🧑 个人简介</h2><ul>
-<li><strong>学历</strong>：本科（电子信息工程）</li>
-<li><strong>毕业院校</strong>：青岛理工大学</li>
-<li><strong>GPA</strong>：4.20</li>
-<li><strong>籍贯</strong>：山东省**市</li>
-</ul>
-<hr>
-<h2 id="📚-教育背景"><a href="#📚-教育背景" class="headerlink" title="📚 教育背景"></a>📚 教育背景</h2><p><strong>2021.09 - 2025.06 | 青岛理工大学 | 电子信息工程</strong></p>
-<ul>
-<li><strong>主修课程</strong>：电路原理、模拟电子技术、数字电子技术、信号与系统、数字信号处理、单片机原理及应用、通信原理、高频电子线路、C&#x2F;C++程序设计等</li>
-<li><strong>辅修课程</strong>：数据结构、数学建模、数据库技术与应用、数字图像处理、嵌入式系统</li>
-</ul>
-<hr>
-<h2 id="🛠-专业技能"><a href="#🛠-专业技能" class="headerlink" title="🛠 专业技能"></a>🛠 专业技能</h2><ul>
-<li><strong>嵌入式开发</strong>：熟练使用 Keil，具备 STM32 等多种单片机编程开发经验，能够独立进行系统级调试。</li>
-<li><strong>机器视觉</strong>：熟悉 OpenMV IDE，能够进行基于视觉的图像处理和多机协同项目开发。</li>
-<li><strong>数据库与编程</strong>：熟悉 MySQL、SQL Server，熟练使用 VS Code，具备代码调试与版本控制能力。</li>
-</ul>
-<hr>
-<h2 id="🚀-项目经历"><a href="#🚀-项目经历" class="headerlink" title="🚀 项目经历"></a>🚀 项目经历</h2><h3 id="1-智能空地协同消防系统-TI-杯"><a href="#1-智能空地协同消防系统-TI-杯" class="headerlink" title="1. 智能空地协同消防系统 (TI 杯)"></a>1. 智能空地协同消防系统 (TI 杯)</h3><ul>
-<li><strong>工具</strong>：Keil, Altium Designer, VS Code, OpenMV, 串口调试工具</li>
-<li><strong>描述</strong>：设计并实现了一套无人机与消防车协同系统。利用 OpenMV 进行火情识别，并通过无线协议实现空地通讯。该项目旨在解决复杂地形下的快速救援问题。</li>
-</ul>
-<h3 id="2-教师工作量管理系统"><a href="#2-教师工作量管理系统" class="headerlink" title="2. 教师工作量管理系统"></a>2. 教师工作量管理系统</h3><ul>
-<li><strong>工具</strong>：MySQL, Visual Studio, VS Code, Navicat</li>
-<li><strong>描述</strong>：开发了具备高效信息录入、自动计算与查询功能的管理系统，模拟学校教务流程，确保了数据处理的准确性与便捷性。</li>
-</ul>
-<hr>
-<h2 id="🏆-荣誉奖项"><a href="#🏆-荣誉奖项" class="headerlink" title="🏆 荣誉奖项"></a>🏆 荣誉奖项</h2><ul>
-<li>**全国大学生电子设计大赛 (TI 杯)**：山东省赛区本科组二等奖</li>
-<li><strong>“大唐杯”全国大学生信息通信技术大赛</strong>：山东省赛区三等奖</li>
-<li><strong>校级荣誉</strong>：连续三学年荣获“优秀学生”称号</li>
-</ul>
-<hr>
-<h2 id="📧-联系方式"><a href="#📧-联系方式" class="headerlink" title="📧 联系方式"></a>📧 联系方式</h2><ul>
-<li><strong>邮箱</strong>：liurh****@163.com (出于隐私保护已掩码，欢迎通过 GitHub 交流)</li>
-<li><strong>GitHub</strong>: [您的GitHub链接]</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>智能空地协同消防系统——2023年电赛实战总结</title>
     <url>/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h2 id="1-项目概况"><a href="#1-项目概况" class="headerlink" title="1. 项目概况"></a>1. 项目概况</h2><p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
@@ -170,6 +127,55 @@ while(True):
         <tag>STM32</tag>
         <tag>OpenMV</tag>
         <tag>电子设计竞赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>家常炖猪蹄教程：软糯香甜，一看就会！</title>
+    <url>/2026/03/11/stewed-pig-trotters/</url>
+    <content><![CDATA[<p>周末去超市买到了新鲜的猪蹄，顺手记录一下这道家常炖猪蹄的做法。步骤简单，厨房新手也能轻松搞定！</p>
+<h3 id="🛒-准备食材"><a href="#🛒-准备食材" class="headerlink" title="🛒 准备食材"></a>🛒 准备食材</h3><ul>
+<li><strong>主料</strong>：猪蹄</li>
+<li><strong>配菜</strong>：根据个人喜好准备（如黄豆、莲藕、土豆等）</li>
+<li><strong>香料</strong>：葱、姜、花椒、八角、香叶</li>
+<li><strong>调料</strong>：料酒、十三香、盐、白砂糖、鸡精（或味精）、食用油</li>
+<li><strong>灵魂用水</strong>：温水</li>
+</ul>
+<hr>
+<h3 id="🍳-制作步骤"><a href="#🍳-制作步骤" class="headerlink" title="🍳 制作步骤"></a>🍳 制作步骤</h3><h4 id="第一步：焯水去腥"><a href="#第一步：焯水去腥" class="headerlink" title="第一步：焯水去腥"></a>第一步：焯水去腥</h4><ol>
+<li>猪蹄冷水下锅。</li>
+<li>放入切好的葱段、姜片，倒入适量料酒去腥。</li>
+<li>水烧开后，继续煮 3 到 4 分钟，煮出表面的白沫。</li>
+<li>将白沫撇掉，捞出猪蹄沥干水分备用。</li>
+</ol>
+<p><img src="/images/food1.jpg" alt="准备好的猪蹄"></p>
+<h4 id="第二步：爆香炒制"><a href="#第二步：爆香炒制" class="headerlink" title="第二步：爆香炒制"></a>第二步：爆香炒制</h4><ol>
+<li>起锅烧油，油热后放入葱、姜、花椒，小火炒出香味。</li>
+<li>倒入焯好水的猪蹄，翻炒至表面微微发黄。</li>
+<li>期间加入适量<strong>十三香</strong>和<strong>盐</strong>。（小贴士：这时候也可以微微放一点白砂糖提鲜）。</li>
+</ol>
+<h4 id="第三步：加水慢炖"><a href="#第三步：加水慢炖" class="headerlink" title="第三步：加水慢炖"></a>第三步：加水慢炖</h4><ol>
+<li>炒香后，向锅中加入<strong>温水</strong>（注意一定要加温水，冷水会让肉质紧缩变柴），水量没过猪蹄。</li>
+<li>放入香叶和八角，大火烧开。</li>
+<li>水开后，放入准备好的配菜，转中小火盖上锅盖慢炖，直到猪蹄炖熟软烂。</li>
+</ol>
+<p><img src="/images/food2.jpg" alt="炖煮中的猪蹄"></p>
+<h4 id="第四步：调味出锅"><a href="#第四步：调味出锅" class="headerlink" title="第四步：调味出锅"></a>第四步：调味出锅</h4><ol>
+<li>在炖煮的后半段，根据口味加入白砂糖。建议先少放一点，后面不够再加。</li>
+<li>炖熟后尝一下汤汁，如果盐味不够此时再补一点盐。</li>
+<li>快出锅的时候，撒入一点鸡精或者味精提鲜。</li>
+<li>大火稍微收一下汁，就可以出锅啦！</li>
+</ol>
+<hr>
+<blockquote>
+<p><strong>💡 总结小贴士</strong>：<br>炒猪蹄时一定要炒到微黄，加水时一定要用温水，调味时本着“少量多次”的原则尝着加，这样炖出来的猪蹄绝对软糯入味！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>生活日常</category>
+      </categories>
+      <tags>
+        <tag>美食</tag>
+        <tag>菜谱</tag>
       </tags>
   </entry>
 </search>

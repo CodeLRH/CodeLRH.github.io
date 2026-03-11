@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Liu</rights>
   <subtitle>细心从每一个小细节开始</subtitle>
   <title>Liu的个人博客</title>
-  <updated>2026-03-09T02:51:07.293Z</updated>
+  <updated>2026-03-11T12:47:46.240Z</updated>
+  <entry>
+    <author>
+      <name>Liu</name>
+    </author>
+    <category term="生活日常" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
+    <category term="美食" scheme="http://example.com/tags/%E7%BE%8E%E9%A3%9F/"/>
+    <category term="菜谱" scheme="http://example.com/tags/%E8%8F%9C%E8%B0%B1/"/>
+    <id>http://example.com/2026/03/11/stewed-pig-trotters/</id>
+    <link href="http://example.com/2026/03/11/stewed-pig-trotters/"/>
+    <published>2026-03-11T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>周末去超市买到了新鲜的猪蹄，顺手记录一下这道家常炖猪蹄的做法。步骤简单，厨房新手也能轻松搞定！</p>
+<h3 id="🛒-准备食材"><a href="#🛒-准备食材" class="headerlink" title="🛒 准备食材"></a>🛒]]>
+    </summary>
+    <title>家常炖猪蹄教程：软糯香甜，一看就会！</title>
+    <updated>2026-03-11T12:47:46.240Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Liu</name>
@@ -46,18 +63,5 @@
     </summary>
     <title>智能空地协同消防系统——2023年电赛实战总结</title>
     <updated>2026-03-04T11:22:26.641Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Liu</name>
-    </author>
-    <id>http://example.com/2026/03/04/index/</id>
-    <link href="http://example.com/2026/03/04/index/"/>
-    <published>2026-03-04T02:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="🧑-个人简介"><a href="#🧑-个人简介" class="headerlink" title="🧑 个人简介"></a>🧑]]>
-    </summary>
-    <title>关于我</title>
-    <updated>2026-03-04T11:38:08.095Z</updated>
   </entry>
 </feed>
