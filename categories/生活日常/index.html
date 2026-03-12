@@ -45,7 +45,7 @@
           font-size: 1.6rem;
         }
       </style>
-    <link rel="alternate" href="/atom.xml" title="Liu的个人博客" type="application/atom+xml">
+    <link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /><link rel="alternate" href="/atom.xml" title="Liu的个人博客" type="application/atom+xml">
 </head>
   </html>
 </html>
@@ -178,15 +178,15 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
+      <a class="nav-item-link" href="/archives/">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
+      <a class="nav-item-link" href="/categories/">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
+      <a class="nav-item-link" href="/tags/">标签</a>
     </li>
     
     <li class="nav-item">
@@ -198,11 +198,11 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
+      <a class="nav-item-link" href="/friends/">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
+      <a class="nav-item-link" href="/about/">关于我</a>
     </li>
     
   </ul>
@@ -377,7 +377,14 @@
 <!-- MathJax -->
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
@@ -459,42 +466,6 @@
 
     
     
-<script>
-  const password = "123456";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
 
   </div>
 </body>

@@ -10,7 +10,27 @@
   <rights>All rights reserved 2026, Liu</rights>
   <subtitle>细心从每一个小细节开始</subtitle>
   <title>Liu的个人博客</title>
-  <updated>2026-03-11T12:47:46.240Z</updated>
+  <updated>2026-03-12T12:55:18.260Z</updated>
+  <entry>
+    <author>
+      <name>Liu</name>
+    </author>
+    <category term="专业探索" scheme="http://example.com/categories/%E4%B8%93%E4%B8%9A%E6%8E%A2%E7%B4%A2/"/>
+    <category term="SOC估算" scheme="http://example.com/tags/SOC%E4%BC%B0%E7%AE%97/"/>
+    <category term="BMS" scheme="http://example.com/tags/BMS/"/>
+    <category term="卡尔曼滤波" scheme="http://example.com/tags/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2/"/>
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="算法部署" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2/"/>
+    <id>http://example.com/2026/03/12/SOC/</id>
+    <link href="http://example.com/2026/03/12/SOC/"/>
+    <published>2026-03-12T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>在新能源汽车与大规模储能系统中，电池管理系统（BMS）是保障安全与效率的大脑。而在 BMS 庞杂的软件架构中，**电池荷电状态（State of Charge, SOC）**的精确估算，始终是学术界与工业界共同死磕的“硬骨头”。</p>
+<p>SOC]]>
+    </summary>
+    <title>电池管理系统(BMS)进阶：动力电池 SOC 估算核心算法深度拆解</title>
+    <updated>2026-03-12T12:55:18.260Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Liu</name>
@@ -23,7 +43,7 @@
     <published>2026-03-11T13:00:00.000Z</published>
     <summary>
       <![CDATA[<p>周末去超市买到了新鲜的猪蹄，顺手记录一下这道家常炖猪蹄的做法。步骤简单，厨房新手也能轻松搞定！</p>
-<h3 id="🛒-准备食材"><a href="#🛒-准备食材" class="headerlink" title="🛒 准备食材"></a>🛒]]>
+<h3 id="🛒-准备食材">🛒]]>
     </summary>
     <title>家常炖猪蹄教程：软糯香甜，一看就会！</title>
     <updated>2026-03-11T12:47:46.240Z</updated>
@@ -41,7 +61,12 @@
     <link href="http://example.com/2026/03/06/hexo-github-tutorial/"/>
     <published>2026-03-06T04:00:00.000Z</published>
     <summary>
-      <![CDATA[<h2 id="1-前期准备：安装必要工具"><a href="#1-前期准备：安装必要工具" class="headerlink" title="1. 前期准备：安装必要工具"></a>1.]]>
+      <![CDATA[<h2 id="1-前期准备：安装必要工具">1. 前期准备：安装必要工具</h2>
+<p>在正式开始之前，你需要安装两个核心环境：</p>
+<ul>
+<li><strong>Node.js</strong>：Hexo 框架运行的基础。
+<ul>
+<li><a]]>
     </summary>
     <title>从零开始：使用 Hexo + GitHub Pages 搭建个人静态博客</title>
     <updated>2026-03-09T02:51:07.293Z</updated>
@@ -59,7 +84,8 @@
     <link href="http://example.com/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/"/>
     <published>2026-03-04T02:30:00.000Z</published>
     <summary>
-      <![CDATA[<h2 id="1-项目概况"><a href="#1-项目概况" class="headerlink" title="1. 项目概况"></a>1. 项目概况</h2><p>在 2023]]>
+      <![CDATA[<h2 id="1-项目概况">1. 项目概况</h2>
+<p>在 2023]]>
     </summary>
     <title>智能空地协同消防系统——2023年电赛实战总结</title>
     <updated>2026-03-04T11:22:26.641Z</updated>

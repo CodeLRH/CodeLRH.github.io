@@ -45,7 +45,7 @@
           font-size: 1.6rem;
         }
       </style>
-    <link rel="alternate" href="/atom.xml" title="Liu的个人博客" type="application/atom+xml">
+    <link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /><link rel="alternate" href="/atom.xml" title="Liu的个人博客" type="application/atom+xml">
 </head>
   </html>
 </html>
@@ -113,12 +113,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-项目概况"><a href="#1-项目概况" class="headerlink" title="1. 项目概况"></a>1. 项目概况</h2><p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
+  <h2 id="1-项目概况">1. 项目概况</h2>
+<p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
 <blockquote>
 <p><strong>所获荣誉</strong>：2023年全国大学生电子设计大赛 山东省赛区本科组二等奖。</p>
 </blockquote>
 <hr>
-<h2 id="2-核心硬件架构"><a href="#2-核心硬件架构" class="headerlink" title="2. 核心硬件架构"></a>2. 核心硬件架构</h2><p>本系统利用了多种嵌入式开发工具和硬件模块进行协同：</p>
+<h2 id="2-核心硬件架构">2. 核心硬件架构</h2>
+<p>本系统利用了多种嵌入式开发工具和硬件模块进行协同：</p>
 <ul>
 <li><strong>主控芯片</strong>：采用 STM32 系列单片机，负责底层逻辑控制与运动补偿。</li>
 <li><strong>视觉大脑</strong>：搭载 <strong>OpenMV</strong> 摄像头，利用其集成的图像处理算法进行火情实时检测。</li>
@@ -126,12 +128,17 @@
 <li><strong>调试工具</strong>：开发过程中重度使用 <strong>Keil</strong>、<strong>VS Code</strong> 以及串口调试助手进行逻辑优化。</li>
 </ul>
 <hr>
-<h2 id="3-工作流程与逻辑实现"><a href="#3-工作流程与逻辑实现" class="headerlink" title="3. 工作流程与逻辑实现"></a>3. 工作流程与逻辑实现</h2><h3 id="3-1-发现火情（无人机端）"><a href="#3-1-发现火情（无人机端）" class="headerlink" title="3.1 发现火情（无人机端）"></a>3.1 发现火情（无人机端）</h3><p>无人机在高空进行巡检，通过 OpenMV 捕捉特定的颜色阈值（模拟火源）。一旦锁定目标，系统会计算出火源相对于无人机的方位信息。</p>
-<h3 id="3-2-协同通讯"><a href="#3-2-协同通讯" class="headerlink" title="3.2 协同通讯"></a>3.2 协同通讯</h3><p>无人机通过无线通讯模块将火情坐标实时传输至地面消防车。</p>
-<h3 id="3-3-快速抵达（消防车端）"><a href="#3-3-快速抵达（消防车端）" class="headerlink" title="3.3 快速抵达（消防车端）"></a>3.3 快速抵达（消防车端）</h3><p>地面消防车接收到指令后，结合自身的传感器数据进行路径规划，以最快速度避障并到达模拟现场执行救援任务。</p>
+<h2 id="3-工作流程与逻辑实现">3. 工作流程与逻辑实现</h2>
+<h3 id="3-1-发现火情-无人机端">3.1 发现火情（无人机端）</h3>
+<p>无人机在高空进行巡检，通过 OpenMV 捕捉特定的颜色阈值（模拟火源）。一旦锁定目标，系统会计算出火源相对于无人机的方位信息。</p>
+<h3 id="3-2-协同通讯">3.2 协同通讯</h3>
+<p>无人机通过无线通讯模块将火情坐标实时传输至地面消防车。</p>
+<h3 id="3-3-快速抵达-消防车端">3.3 快速抵达（消防车端）</h3>
+<p>地面消防车接收到指令后，结合自身的传感器数据进行路径规划，以最快速度避障并到达模拟现场执行救援任务。</p>
 <hr>
-<h2 id="4-核心代码片段-示例"><a href="#4-核心代码片段-示例" class="headerlink" title="4. 核心代码片段 (示例)"></a>4. 核心代码片段 (示例)</h2><p>以下是基于 OpenMV 的火情识别逻辑简述：</p>
-<pre><code class="python">import sensor, image, time
+<h2 id="4-核心代码片段-示例">4. 核心代码片段 (示例)</h2>
+<p>以下是基于 OpenMV 的火情识别逻辑简述：</p>
+<pre><code class="language-python">import sensor, image, time
 
 # 设置颜色识别阈值（模拟火焰色）
 fire_threshold = (30, 100, 15, 127, 15, 127)
@@ -148,8 +155,7 @@ while(True):
         for b in blobs:
             img.draw_rectangle(b.rect())
             # 发送坐标给 STM32 进行无线传输
-            print(&quot;Fire detected at:&quot;, b.cx(), b.cy())
-</code></pre>
+            print(&quot;Fire detected at:&quot;, b.cx(), b.cy())</code></pre>
  
       <!-- reward -->
       
@@ -242,15 +248,7 @@ while(True):
   
    
   
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
+    
 </article>
 
 </section>
@@ -322,15 +320,15 @@ while(True):
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
+      <a class="nav-item-link" href="/archives/">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
+      <a class="nav-item-link" href="/categories/">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
+      <a class="nav-item-link" href="/tags/">标签</a>
     </li>
     
     <li class="nav-item">
@@ -342,11 +340,11 @@ while(True):
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
+      <a class="nav-item-link" href="/friends/">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
+      <a class="nav-item-link" href="/about/">关于我</a>
     </li>
     
   </ul>
@@ -537,7 +535,14 @@ while(True):
 <!-- MathJax -->
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
@@ -619,42 +624,6 @@ while(True):
 
     
     
-<script>
-  const password = "123456";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
 
   </div>
 </body>

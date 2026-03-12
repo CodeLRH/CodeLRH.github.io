@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Liu的个人博客</title>
+      <title>电池管理系统(BMS)进阶：动力电池 SOC 估算核心算法深度拆解 |  Liu的个人博客</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,109 +56,8 @@
     
       
     <main class="content on">
-      
-<section class="cover">
-    
-      
-      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Liu的个人博客</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
-        startDelay: 0,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
+      <section class="outer">
+  <article
   id="post-SOC"
   class="article article-type-post"
   itemscope
@@ -169,10 +68,9 @@
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2026/03/12/SOC/"
-    >电池管理系统(BMS)进阶：动力电池 SOC 估算核心算法深度拆解</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  电池管理系统(BMS)进阶：动力电池 SOC 估算核心算法深度拆解
+</h1>
  
 
       
@@ -185,9 +83,34 @@
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E4%B8%93%E4%B8%9A%E6%8E%A2%E7%B4%A2/">专业探索</a>
   </div>
-   
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">7 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
     <div class="article-entry" itemprop="articleBody">
        
   <p>在新能源汽车与大规模储能系统中，电池管理系统（BMS）是保障安全与效率的大脑。而在 BMS 庞杂的软件架构中，**电池荷电状态（State of Charge, SOC）**的精确估算，始终是学术界与工业界共同死磕的“硬骨头”。</p>
@@ -264,354 +187,90 @@ LSTM 通过遗忘门和记忆门机制，天然契合电池“当前状态依赖
 
     <!-- copyright -->
     
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
     <footer class="article-footer">
        
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2026/03/12/SOC/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BMS/" rel="tag">BMS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOC%E4%BC%B0%E7%AE%97/" rel="tag">SOC估算</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2/" rel="tag">卡尔曼滤波</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2/" rel="tag">算法部署</a></li></ul>
 
     </footer>
   </div>
 
    
+  <nav class="article-nav">
+    
+    
+      <a href="/2026/03/11/stewed-pig-trotters/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">家常炖猪蹄教程：软糯香甜，一看就会！</div>
+      </a>
+    
+  </nav>
+
+  
    
   
+    
 </article>
 
-    
-    <article
-  id="post-stewed-pig-trotters"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2026/03/11/stewed-pig-trotters/"
-    >家常炖猪蹄教程：软糯香甜，一看就会！</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2026/03/11/stewed-pig-trotters/" class="article-date">
-  <time datetime="2026-03-11T13:00:00.000Z" itemprop="datePublished">2026-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/">生活日常</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>周末去超市买到了新鲜的猪蹄，顺手记录一下这道家常炖猪蹄的做法。步骤简单，厨房新手也能轻松搞定！</p>
-<h3 id="🛒-准备食材">🛒 准备食材</h3>
-<ul>
-<li><strong>主料</strong>：猪蹄</li>
-<li><strong>配菜</strong>：根据个人喜好准备（如黄豆、莲藕、土豆等）</li>
-<li><strong>香料</strong>：葱、姜、花椒、八角、香叶</li>
-<li><strong>调料</strong>：料酒、十三香、盐、白砂糖、鸡精（或味精）、食用油</li>
-<li><strong>灵魂用水</strong>：温水</li>
-</ul>
-<hr>
-<h3 id="🍳-制作步骤">🍳 制作步骤</h3>
-<h4 id="第一步：焯水去腥">第一步：焯水去腥</h4>
-<ol>
-<li>猪蹄冷水下锅。</li>
-<li>放入切好的葱段、姜片，倒入适量料酒去腥。</li>
-<li>水烧开后，继续煮 3 到 4 分钟，煮出表面的白沫。</li>
-<li>将白沫撇掉，捞出猪蹄沥干水分备用。</li>
-</ol>
-<p><img src="/images/food1.jpg" alt="准备好的猪蹄"></p>
-<h4 id="第二步：爆香炒制">第二步：爆香炒制</h4>
-<ol>
-<li>起锅烧油，油热后放入葱、姜、花椒，小火炒出香味。</li>
-<li>倒入焯好水的猪蹄，翻炒至表面微微发黄。</li>
-<li>期间加入适量<strong>十三香</strong>和<strong>盐</strong>。（小贴士：这时候也可以微微放一点白砂糖提鲜）。</li>
-</ol>
-<h4 id="第三步：加水慢炖">第三步：加水慢炖</h4>
-<ol>
-<li>炒香后，向锅中加入<strong>温水</strong>（注意一定要加温水，冷水会让肉质紧缩变柴），水量没过猪蹄。</li>
-<li>放入香叶和八角，大火烧开。</li>
-<li>水开后，放入准备好的配菜，转中小火盖上锅盖慢炖，直到猪蹄炖熟软烂。</li>
-</ol>
-<p><img src="/images/food2.jpg" alt="炖煮中的猪蹄"></p>
-<h4 id="第四步：调味出锅">第四步：调味出锅</h4>
-<ol>
-<li>在炖煮的后半段，根据口味加入白砂糖。建议先少放一点，后面不够再加。</li>
-<li>炖熟后尝一下汤汁，如果盐味不够此时再补一点盐。</li>
-<li>快出锅的时候，撒入一点鸡精或者味精提鲜。</li>
-<li>大火稍微收一下汁，就可以出锅啦！</li>
-</ol>
-<hr>
-<blockquote>
-<p><strong>💡 总结小贴士</strong>：<br>
-炒猪蹄时一定要炒到微黄，加水时一定要用温水，调味时本着“少量多次”的原则尝着加，这样炖出来的猪蹄绝对软糯入味！</p>
-</blockquote>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F/" rel="tag">美食</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%8F%9C%E8%B0%B1/" rel="tag">菜谱</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-hexo-github-tutorial"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2026/03/06/hexo-github-tutorial/"
-    >从零开始：使用 Hexo + GitHub Pages 搭建个人静态博客</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2026/03/06/hexo-github-tutorial/" class="article-date">
-  <time datetime="2026-03-06T04:00:00.000Z" itemprop="datePublished">2026-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-前期准备：安装必要工具">1. 前期准备：安装必要工具</h2>
-<p>在正式开始之前，你需要安装两个核心环境：</p>
-<ul>
-<li><strong>Node.js</strong>：Hexo 框架运行的基础。
-<ul>
-<li><a target="_blank" rel="noopener" href="https://nodejs.org/">官方下载地址</a> (建议选择 LTS 长期支持版)</li>
-</ul>
-</li>
-<li><strong>Git</strong>：用于将本地代码推送到 GitHub。
-<ul>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/">官方下载地址</a></li>
-</ul>
-</li>
-</ul>
-<p>安装完成后，在终端（Git Bash）输入 <code>node -v</code> 和 <code>git --version</code> 检查是否安装成功。</p>
-<hr>
-<h2 id="2-本地搭建-hexo-网站">2. 本地搭建 Hexo 网站</h2>
-<ol>
-<li><strong>安装 Hexo 命令行工具</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><strong>初始化博客目录</strong>：<br>
-找一个空文件夹（例如 <code>E:/Myblog</code>），打开 Git Bash 输入：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><strong>本地预览</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-现在访问 <code>http://localhost:4000</code> 即可看到你的初始博客。</li>
-</ol>
-<hr>
-<h2 id="3-借鉴主题美化页面">3. 借鉴主题美化页面</h2>
-<p>Hexo 的魅力在于丰富的主题。你可以前往 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo Themes</a> 寻找心仪的设计：</p>
-<ul>
-<li><strong>热门推荐</strong>：NexT, Butterfly, Fluid。</li>
-<li><strong>安装方法</strong>：通常是通过 <code>git clone</code> 将主题下载到 <code>themes/</code> 文件夹，并修改根目录下的 <code>_config.yml</code> 中的 <code>theme</code> 字段。</li>
-</ul>
-<hr>
-<h2 id="4-设置-ssh-密钥：打通-github-部署隧道">4. 设置 SSH 密钥：打通 GitHub 部署隧道</h2>
-<p>为了安全且稳定地将博客发布到 GitHub，我们需要配置 SSH 密钥。</p>
-<h3 id="第一步：生成-ssh-密钥对">第一步：生成 SSH 密钥对</h3>
-<p>在 Git Bash 中输入（请替换为你自己的邮箱）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="第二步：将-ssh-key-添加到-github">第二步：将 SSH Key 添加到 GitHub</h3>
-<ul>
-<li>
-<p><strong>获取公钥</strong>：在终端输入以下命令显示公钥内容：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><strong>复制内容</strong>：用鼠标选中屏幕上以 <code>ssh-rsa</code> 开头、以你的邮箱结尾的那一大串字符，右键选择 <strong>Copy</strong>。</p>
-</li>
-<li>
-<p><strong>前往 GitHub 配置</strong>：</p>
-<ol>
-<li>登录 GitHub，点击右上角头像 -&gt; <strong>Settings</strong>。</li>
-<li>在左侧菜单找到 <strong>SSH and GPG keys</strong>。</li>
-<li>点击绿色的 <strong>New SSH key</strong> 按钮。</li>
-<li><strong>Title</strong> 随便填（例如填 <code>My Laptop</code>），在 <strong>Key</strong> 的文本框内粘贴你刚才复制的公钥内容。</li>
-<li>点击 <strong>Add SSH key</strong> 保存。</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h3 id="第三步：验证连接">第三步：验证连接</h3>
-<p>在 Git Bash 中输入以下命令测试连接是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>重要提示</strong>：第一次连接时，你会看到一条类似这样的警告：
-<blockquote>
-<p><code>The authenticity of host 'github.com' can't be established... Are you sure you want to continue connecting (yes/no/[fingerprint])?</code></p>
-</blockquote>
-</li>
-<li>此时<strong>必须输入 <code>yes</code> 并回车</strong>。</li>
-<li>如果屏幕上出现 <code>Hi CodeLRH! You've successfully authenticated...</code>，恭喜你，说明你已经成功打通了与 GitHub 的“秘密隧道”！</li>
-</ul>
-<hr>
-<h3 id="第四步：修改-hexo-配置并部署">第四步：修改 Hexo 配置并部署</h3>
-<ol>
-<li><strong>修改配置文件</strong>：打开博客根目录下的 <code>_config.yml</code> 文件。</li>
-<li><strong>配置 SSH 地址</strong>：将最底部的 <code>deploy</code> 部分修改为 SSH 格式（注意 <code>repo</code> 地址的写法变化）：</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:CodeLRH/CodeLRH.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><strong>一键部署发布</strong>：在 Git Bash 中运行以下组合命令：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-智能空地协同消防系统开发心得"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/"
-    >智能空地协同消防系统——2023年电赛实战总结</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2026/03/04/%E6%99%BA%E8%83%BD%E7%A9%BA%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%B6%88%E9%98%B2%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/" class="article-date">
-  <time datetime="2026-03-04T02:30:00.000Z" itemprop="datePublished">2026-03-04</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">项目实战</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-项目概况">1. 项目概况</h2>
-<p>在 2023 年全国大学生电子设计竞赛中，针对复杂环境下救援人员难以抵达的痛点，我们设计并实现了一套<strong>智能空地协同消防系统</strong>。该系统由一台智能自主无人机和一台地面消防车组成，通过视觉识别与无线通讯实现高效联动。</p>
-<blockquote>
-<p><strong>所获荣誉</strong>：2023年全国大学生电子设计大赛 山东省赛区本科组二等奖。</p>
-</blockquote>
-<hr>
-<h2 id="2-核心硬件架构">2. 核心硬件架构</h2>
-<p>本系统利用了多种嵌入式开发工具和硬件模块进行协同：</p>
-<ul>
-<li><strong>主控芯片</strong>：采用 STM32 系列单片机，负责底层逻辑控制与运动补偿。</li>
-<li><strong>视觉大脑</strong>：搭载 <strong>OpenMV</strong> 摄像头，利用其集成的图像处理算法进行火情实时检测。</li>
-<li><strong>硬件设计</strong>：利用 <strong>Altium Designer</strong> 完成了系统核心 PCB 板的绘制与电路打样。</li>
-<li><strong>调试工具</strong>：开发过程中重度使用 <strong>Keil</strong>、<strong>VS Code</strong> 以及串口调试助手进行逻辑优化。</li>
-</ul>
-<hr>
-<h2 id="3-工作流程与逻辑实现">3. 工作流程与逻辑实现</h2>
-<h3 id="3-1-发现火情-无人机端">3.1 发现火情（无人机端）</h3>
-<p>无人机在高空进行巡检，通过 OpenMV 捕捉特定的颜色阈值（模拟火源）。一旦锁定目标，系统会计算出火源相对于无人机的方位信息。</p>
-<h3 id="3-2-协同通讯">3.2 协同通讯</h3>
-<p>无人机通过无线通讯模块将火情坐标实时传输至地面消防车。</p>
-<h3 id="3-3-快速抵达-消防车端">3.3 快速抵达（消防车端）</h3>
-<p>地面消防车接收到指令后，结合自身的传感器数据进行路径规划，以最快速度避障并到达模拟现场执行救援任务。</p>
-<hr>
-<h2 id="4-核心代码片段-示例">4. 核心代码片段 (示例)</h2>
-<p>以下是基于 OpenMV 的火情识别逻辑简述：</p>
-<pre><code class="language-python">import sensor, image, time
-
-# 设置颜色识别阈值（模拟火焰色）
-fire_threshold = (30, 100, 15, 127, 15, 127)
-
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA)
-sensor.skip_frames(time = 2000)
-
-while(True):
-    img = sensor.snapshot()
-    blobs = img.find_blobs([fire_threshold])
-    if blobs:
-        for b in blobs:
-            img.draw_rectangle(b.rect())
-            # 发送坐标给 STM32 进行无线传输
-            print(&quot;Fire detected at:&quot;, b.cx(), b.cy())</code></pre>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenMV/" rel="tag">OpenMV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STM32/" rel="tag">STM32</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="tag">嵌入式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" rel="tag">电子设计竞赛</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-  </article>
-  
-
-  
 </section>
-</div>
-
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -759,6 +418,22 @@ while(True):
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
