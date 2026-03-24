@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="电子信息, 嵌入式, STM32, 信号处理" />
+       
+      <meta name="description" content="专注电子信息工程、信号处理与嵌入式开发" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>通信类考研复试核心15题（通信原理/模电/数电/高频） |  Liu的个人博客</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /><link rel="alternate" href="/atom.xml" title="Liu的个人博客" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-通信问答1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  通信类考研复试核心15题（通信原理/模电/数电/高频）
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/03/24/%E9%80%9A%E4%BF%A1%E9%97%AE%E7%AD%941/" class="article-date">
+  <time datetime="2026-03-24T09:06:00.000Z" itemprop="datePublished">2026-03-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p><strong>科目分布</strong>：通信原理3 + 模电3 + 数电3 + 高频电子4 + 单片机1 + C语言1（无信号）</p>
+</blockquote>
+<hr>
+<h2 id="一-通信原理-3题">一、通信原理（3题）</h2>
+<h3 id="1-数字通信系统相比模拟通信系统的优点">1. 数字通信系统相比模拟通信系统的优点</h3>
+<p><strong>答案</strong>：</p>
+<ol>
+<li>抗干扰能力强，噪声不累积；</li>
+<li>便于进行各种数字信号处理；</li>
+<li>易于集成化，设备体积小、功耗低；</li>
+<li>便于实现多路复用，提高频带利用率；</li>
+<li>可靠性高，可通过信道编码进行检错与纠错；</li>
+<li>易于实现综合业务数字网（ISDN）。</li>
+</ol>
+<h3 id="2-信源编码与信道编码的作用">2. 信源编码与信道编码的作用</h3>
+<p><strong>答案</strong>：</p>
+<ul>
+<li><strong>信源编码</strong>：减少信号冗余度，进行数据压缩，提高通信系统的<strong>有效性</strong>。</li>
+<li><strong>信道编码</strong>：加入监督码元，实现检错和纠错，提高通信系统的<strong>可靠性</strong>。</li>
+</ul>
+<h3 id="3-什么是码间串扰？如何消除？">3. 什么是码间串扰？如何消除？</h3>
+<p><strong>答案</strong>：<br>
+码间串扰是指前后码元的波形发生展宽、拖尾，对当前码元的抽样判决造成干扰，导致误码。<br>
+<strong>消除方法</strong>：使基带系统的冲激响应仅在本码元抽样时刻取最大值，在其他码元抽样时刻均为0，满足<strong>奈奎斯特第一准则</strong>，即可实现无码间串扰传输。</p>
+<hr>
+<h2 id="二-模拟电子技术-3题">二、模拟电子技术（3题）</h2>
+<h3 id="4-pn结的单向导电性原理">4. PN结的单向导电性原理</h3>
+<p><strong>答案</strong>：</p>
+<ul>
+<li>PN结<strong>正向偏置</strong>（P正、N负）时，内电场被削弱，多子扩散运动加强，形成较大正向电流，PN结导通；</li>
+<li>PN结<strong>反向偏置</strong>（P负、N正）时，内电场被加强，多子扩散被抑制，只有极小的反向漏电流，PN结截止。<br>
+因此电流只能单方向通过，称为单向导电性。</li>
+</ul>
+<h3 id="5-晶体管实现放大的外部条件">5. 晶体管实现放大的外部条件</h3>
+<p><strong>答案</strong>：<br>
+必须满足：<strong>发射结正向偏置，集电结反向偏置</strong>。<br>
+只有满足该偏置条件，晶体管才能工作在放大区，实现电流放大作用。</p>
+<h3 id="6-差分放大电路的主要功能">6. 差分放大电路的主要功能</h3>
+<p><strong>答案</strong>：<br>
+差分放大电路的核心特点是：<strong>放大差模信号，抑制共模信号</strong>。<br>
+最大作用是有效抑制<strong>零点漂移（温度漂移）</strong>，广泛用作集成运放的输入级。</p>
+<hr>
+<h2 id="三-数字电子技术-3题">三、数字电子技术（3题）</h2>
+<h3 id="7-组合逻辑电路与时序逻辑电路的区别">7. 组合逻辑电路与时序逻辑电路的区别</h3>
+<p><strong>答案</strong>：</p>
+<ul>
+<li><strong>组合逻辑电路</strong>：无记忆功能，输出仅由<strong>当前输入</strong>决定，不含触发器。</li>
+<li><strong>时序逻辑电路</strong>：有记忆功能，输出由<strong>当前输入 + 电路原来状态</strong>共同决定，包含触发器。</li>
+</ul>
+<h3 id="8-什么是竞争与冒险？如何消除？">8. 什么是竞争与冒险？如何消除？</h3>
+<p><strong>答案</strong>：<br>
+由于信号经过不同路径到达门电路的时间不同，导致输出瞬间出现干扰毛刺，称为竞争冒险。<br>
+<strong>消除方法</strong>：</p>
+<ol>
+<li>修改逻辑设计，增加冗余项；</li>
+<li>引入选通脉冲；</li>
+<li>输出端并联小滤波电容。</li>
+</ol>
+<h3 id="9-触发器的基本功能">9. 触发器的基本功能</h3>
+<p><strong>答案</strong>：<br>
+触发器是时序逻辑电路的基本单元，具有<strong>0/1两种稳定状态</strong>，能够<strong>存储一位二进制信息</strong>，具备记忆功能。</p>
+<hr>
+<h2 id="四-高频电子线路-4题-重点加强">四、高频电子线路（4题 · 重点加强）</h2>
+<h3 id="10-通信系统为什么要采用调制？">10. 通信系统为什么要采用调制？</h3>
+<p><strong>答案</strong>：</p>
+<ol>
+<li>使低频基带信号搬移到高频频段，便于天线辐射，实现远距离传输；</li>
+<li>减小天线尺寸，便于设备小型化；</li>
+<li>实现频分复用（FDM），多个信号共用信道，提高频带利用率；</li>
+<li>提高系统抗干扰能力与传输性能。</li>
+</ol>
+<h3 id="11-lc并联谐振回路的特性与作用">11. LC并联谐振回路的特性与作用</h3>
+<p><strong>答案</strong>：</p>
+<ul>
+<li><strong>特性</strong>：谐振时回路阻抗最大，且为纯电阻，相移为0。</li>
+<li><strong>作用</strong>：选频、滤波、阻抗匹配、波形放大，是高频放大器与振荡器的核心部件。</li>
+</ul>
+<h3 id="12-高频谐振功率放大器为何工作在丙类？">12. 高频谐振功率放大器为何工作在丙类？</h3>
+<p><strong>答案</strong>：<br>
+丙类工作状态的导通角小于180°，晶体管仅在信号部分周期导通，<strong>管耗小、效率高</strong>，适合大功率高频功率放大。<br>
+依靠LC谐振回路的滤波作用，仍可输出不失真的正弦波形。</p>
+<h3 id="13-超外差接收机中混频器的作用">13. 超外差接收机中混频器的作用</h3>
+<p><strong>答案</strong>：<br>
+将接收到的<strong>不同载频高频信号</strong>变换为<strong>固定频率的中频信号</strong>。</p>
+<ul>
+<li><strong>优点</strong>：中频固定且较低，容易实现高增益、高选择性放大，显著提高接收机的灵敏度、稳定性和抗干扰能力。</li>
+</ul>
+<hr>
+<h2 id="五-单片机原理-1题">五、单片机原理（1题）</h2>
+<h3 id="14-单片机中断响应的条件">14. 单片机中断响应的条件</h3>
+<p><strong>答案</strong>：</p>
+<ol>
+<li>总中断允许位 <strong>EA = 1</strong>；</li>
+<li>对应中断源的允许位为1；</li>
+<li>无更高级别中断正在服务；</li>
+<li>当前指令已经执行完毕。</li>
+</ol>
+<hr>
+<h2 id="六-c语言程序设计-1题">六、C语言程序设计（1题）</h2>
+<h3 id="15-全局变量与局部变量的区别">15. 全局变量与局部变量的区别</h3>
+<p><strong>答案</strong>：</p>
+<ul>
+<li><strong>全局变量</strong>：定义在函数外部，存储在静态存储区，作用域贯穿整个程序，生命周期与程序相同。</li>
+<li><strong>局部变量</strong>：定义在函数内部，存储在栈区，仅在函数内部有效，函数调用结束后释放。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：两者可以重名，当重名时，<strong>局部变量会屏蔽全局变量</strong>。</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2026/03/24/%E9%80%9A%E4%BF%A1%E9%97%AE%E7%AD%941/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" rel="tag">电子技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/" rel="tag">考研复试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B/" rel="tag">通信工程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2026/03/24/%E9%80%9A%E4%BF%A1%E9%97%AE%E7%AD%942/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            通信类考研复试全新核心15题（通信原理/模电/数电/高频/基础）
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2026/03/12/SOC/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">电池管理系统(BMS)进阶：动力电池 SOC 估算核心算法深度拆解</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2026
+        <i class="ri-heart-fill heart_icon"></i> Liu
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/niu.png" alt="Liu的个人博客"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives/">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E7%BE%8E%E9%A3%9F/">美食</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends/">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
