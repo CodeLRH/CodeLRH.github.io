@@ -1,0 +1,27 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codelrh.github.io/sitemap.xml
+
+# 禁止抓取的文件和目录
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /lib/
+Disallow: /archives/
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /friends/
+Disallow: /about/
+Disallow: /favicon.ico
+Disallow: /robots.txt
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Googlebot
+Allow: /
